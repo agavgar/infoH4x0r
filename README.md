@@ -1,4 +1,4 @@
-**Práctica para el módulo Fundamentos iOS de Keepcoding.**
+**Trabajo personal**
 
 Este es un trabajo personal que he realizado para ir practicando con SwiftUI. Se trata de una aplicación que actualiza el portal de noticias basada en la web (https://hn.algolia.com/). Si no la conoceis, esta web se utiliza mucho para prácticar API calls y trabajar el patrón de **OBSERVER** de manera que la información se actuializa constantemente cuando salen informaciones nuevas.
 
