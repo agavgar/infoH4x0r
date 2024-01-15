@@ -13,22 +13,32 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationStack{
-            VStack {
-                Text("Noticias Hacker")
-                List(networkManager.posts){ post in
-                    NavigationLink(destination: DetailView(url: post.url)) {
-                        HStack {
-                            Text(String(post.points))
-                            Text(post.title)
-                        }
-                    }
+        ZStack {
+            Rectangle()
+                .ignoresSafeArea()
+                .background(Color.black)
+            NavigationStack{
+                
+                VStack {
                     
+                    Text("Canal de Noticias H4x0r")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .bold()
+                    
+                    List(networkManager.posts){ post in
+                        NavigationLink(destination: DetailView(url: post.url)) {
+                            HStack {
+                                Text(String(post.points))
+                                Text(post.title)
+                            }
+                        }
+                        
+                    }
                 }
-            }
-        }.onAppear {
-                self.networkManager.fetchData()
-            }
+            }.onAppear {
+                    self.networkManager.fetchData()
+        }.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+        }
         
     }
     
